@@ -1,7 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from . forms import PersonForm
 from app.models import Person
-from django.shortcuts import redirect
 
 # Create your views here.
 
@@ -21,3 +20,7 @@ def create(request):
         form.save()
         return redirect('home.html')
     
+def view(request, pk):
+    data = {}
+    data['db'] = Person.objects.get(pk=pk)
+    return render(request, 'view.html')
