@@ -21,9 +21,11 @@
         <form name="form" id="form" method="post" action="/create/"></form>
 
         {% csrf_token %}
+        {{ form.as_p}}
 
-        <div class="form-group mt-4">First name: {{form.first_name}}</div>
-        <div class="form-group mt-4">Last name: {{form.last_name}}</div>
+        <!-- O código acima substitui o html de forma mais elegante -->
+        <!-- <div class="form-group mt-4">First name: {{form.first_name}}</div>
+        <div class="form-group mt-4">Last name: {{form.last_name}}</div> -->
 
         <input type="submit" value="Salvar" class="btn btn-success">
 

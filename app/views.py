@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from . forms import PersonForm
+from .forms import PersonForm
 from app.models import Person
 
 # Create your views here.
